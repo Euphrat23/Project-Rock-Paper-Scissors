@@ -10,6 +10,10 @@ function getRandomInt(min, max) {
 function game(playerItem){
     //Rock = 0, Paper = 1, Scissor = 2 
     let compItem = getRandomInt(0,2);
+    let items = ["&#9994;", "&#9995;", "&#9996;"];
+
+    document.getElementById('itemOfPlayer').innerHTML = items[playerItem];
+    document.getElementById('itemOfComp').innerHTML = items[compItem];
 
     switch(playerItem){
         

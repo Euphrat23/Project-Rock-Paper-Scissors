@@ -38,6 +38,8 @@ border: 2px solid orange;
 background-color: rgba(0, 0, 0, 0);
 color: white;
 cursor: pointer;
+text-align: center;
+font-size: 60px;
 }
 
 #player {
@@ -84,7 +86,6 @@ cursor: pointer;
    display: flex;
    width: fit-content;
    height: fit-content;
-   display: flex;
    position: absolute;
    font-size: 32px;
    top: 220px;
@@ -96,9 +97,28 @@ cursor: pointer;
    display: flex;
    width: fit-content;
    height: fit-content;
-   display: flex;
    position: absolute;
    font-size: 32px;
    top: 220px;
    right: 50px;
+}
+
+#itemOfPlayer{
+   display: flex;
+   width: fit-content;
+   height: fit-content;
+   position: absolute;
+   font-size: 60px;
+   top: 150px;
+   right: 250px;
+}
+
+#itemOfComp {
+   display: flex;
+   width: fit-content;
+   height: fit-content;
+   position: absolute;
+   font-size: 60px;
+   top: 150px;
+   left: 250px;
 }
