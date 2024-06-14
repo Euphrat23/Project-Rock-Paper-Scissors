@@ -1,3 +1,5 @@
+let compScore = 0;
+let playerScore = 0;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -10,27 +12,43 @@ function game(playerItem){
     let compItem = getRandomInt(0,2);
 
     switch(playerItem){
+        
         case 0:
             if (compItem == 1){
-                //player lose
+                document.getElementById('text').innerHTML = "Paper beats Rock.<br / >You lose!";
+                compScore++;
             }else if(compItem == 2){
-                //player wins
+                document.getElementById('text').innerHTML = "Rock beats Scissor.<br / >You win!";
+                playerScore++;
+            }else{
+                document.getElementById('text').innerHTML = "Rock can not beat Rock.<br / >draw!";
             }
             break;
         case 1:
             if (compItem == 2){
-                //player lose
+                document.getElementById('text').innerHTML = "Scissor beats Paper.<br / >You lose!";
+                compScore++;
             }else if(compItem == 0){
-                //player wins
+                document.getElementById('text').innerHTML = "Paper beats Rock.<br / >You win!";
+                playerScore++;
+            }else {
+                document.getElementById('text').innerHTML = "Paper can not beat Paper.<br / >draw!";
             }
             break;
         case 2:
             if (compItem == 0){
-                //player lose
+                document.getElementById('text').innerHTML = "Rock beats Scissor.<br / >You lose!";
+                compScore++;
             }else if(compItem == 1){
-               //player wins
+                document.getElementById('text').innerHTML = "Scissor beats Paper.<br / >You win!";
+                playerScore++;
+            }else{
+                document.getElementById('text').innerHTML = "Scissor can not beat Scissor.<br / >draw!";
             }
             break;
     }
+
+    document.getElementById('compScore').innerHTML = compScore;
+    document.getElementById('playerScore').innerHTML = playerScore;
 
 }
