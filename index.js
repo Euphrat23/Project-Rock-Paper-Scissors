@@ -6,16 +6,31 @@ function getRandomInt(min, max) {
 }
 
 function game(playerItem){
-    //Rock = 1, Paper = 2, Scissor = 3 
-    let compItem = getRandomInt(1,3);
+    //Rock = 0, Paper = 1, Scissor = 2 
+    let compItem = getRandomInt(0,2);
 
     switch(playerItem){
-        case 1:
-            if (compItem = 1){
-                //draw
+        case 0:
+            if (compItem == 1){
+                //player lose
+            }else if(compItem == 2){
+                //player wins
             }
             break;
-            case 2:
+        case 1:
+            if (compItem == 2){
+                //player lose
+            }else if(compItem == 0){
+                //player wins
+            }
+            break;
+        case 2:
+            if (compItem == 0){
+                //player lose
+            }else if(compItem == 1){
+               //player wins
+            }
+            break;
     }
 
 }
