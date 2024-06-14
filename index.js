@@ -56,3 +56,7 @@ function game(playerItem){
     document.getElementById('playerScore').innerHTML = playerScore;
 
 }
+
+function reset() {
+    location.reload(); // Diese Methode lädt die Seite neu
+}
